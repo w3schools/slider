@@ -18,23 +18,29 @@ function swap(){
 return myarray;	
 }
 function prt(){
+	test = new Array();
 	newarray = new Array();
 	newarray[0] =  swap();
 	myarray = newarray[0];
+	test +=newarray[0];
 	document.write(newarray[0]+"</br>");
 	
 	newarray[1] =  swap();
 	myarray = newarray[1];
+	test +=newarray[1];
 	document.write(newarray[1]+"</br>");
 
 	newarray[2] =  swap();
 	myarray = newarray[2];
+	test +=newarray[2];
 	document.write(newarray[2]+"</br>");
 
 	newarray[3] =  swap();
 	myarray = newarray[3];
+	test +=newarray[3];
 	document.write(newarray[3]+"</br>");
 	
+	document.write(test);
 }
 setTimeout(prt,2000);
 </script>
