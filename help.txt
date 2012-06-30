@@ -1,8 +1,16 @@
-/*help :
+/*create a array  :
 	var badArray = new Array(10); // Creates an empty Array that's sized for 10 elements.
 	var goodArray= [10];          // Creates an Array with 10 as the first element.
+	
 */
 
+/*create a Object  :
+	var obj  =  new Object();
+	obj.x= '1';
+	obj.y = '2';
+	//*** or ***
+	var obj = {x:'1', y:'2'};
+*/
 -convert array to string :{
 	var a = ["green","blue","red"];
 	a.toLocaleString();	  //out put : "red,green,blue"
