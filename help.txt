@@ -1,3 +1,8 @@
+/*help :
+	var badArray = new Array(10); // Creates an empty Array that's sized for 10 elements.
+	var goodArray= [10];          // Creates an Array with 10 as the first element.
+*/
+
 -convert array to string :{
 	var a = ["green","blue","red"];
 	a.toLocaleString();	  //out put : "red,green,blue"

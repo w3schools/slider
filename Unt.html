@@ -4,47 +4,23 @@
 </head>
 <body>
 <script type="text/javascript">
-/*help :
-	var badArray = new Array(10); // Creates an empty Array that's sized for 10 elements.
-	var goodArray= [10];          // Creates an Array with 10 as the first element.
-*/
-var myarray  = new Array(0,1,2,3,4,5,6,7,8,9),x,value,key;
+var obj = new Object();
 
-function swap(){
-	x = myarray[0];
-	for (i=1;i<myarray.length;i++)
-		myarray[i-1] = myarray[i];
-	myarray[myarray.length-1] = x;
-return myarray;	
+var myarray  = new Array(0,1,2,3,4,5,6,7,8,9);
+
+function queue(){
+	myarray.shift(myarray.push(myarray[0]));	
 }
-function prt(){
-	test = new Array();
-	newarray = new Array();
-/*1*/
-	newarray[0] =  swap();
-	myarray = newarray[0];
-	test = newarray[0];
-	console.log(test);
-	//document.write(test+"</br>");
-/*2*/
-	newarray[1] =  swap();
-	myarray = newarray[1];
-	test.concat(newarray[1]);
-	console.log(test);
-	//document.write(test+"</br>");
-/*3*/
-	newarray[2] =  swap();
-	myarray = newarray[2];
-	test.concat(newarray[2]);
-	console.log(test);
-	//document.write(test+"</br>");
-/*4*/
-	newarray[3] =  swap();
-	myarray = newarray[3];
-	test.concat(newarray[3]);
-	console.log(test);
-}
-prt();
+
+
+queue();
+document.write(myarray+'<br>');
+queue();
+document.write(myarray+'<br>');
+queue();
+document.write(myarray+'<br>');
+
+
 </script>
 </body>
 </html>
