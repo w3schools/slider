@@ -13,6 +13,12 @@
 
 -add new values to array:{
 	var num1 = ["1","2","3"];
-	var num2 = num1.concat("4","5");
-	console.log(num2.toString());
+	var num2 = arr.concat("4","5");
+	console.log(num2.toString());["1","2","3","4","5"]
+}
+-return specific elements of array:{
+	var num1 = ["1","2","3","4","5"];
+	var num2 = num1.slice(1);//["2","3","4","5"]
+	num1.slice(1,4);//["2","3","4"]
+	/* arr.slice(n,m) -> return [n,...,m-1] */
 }

@@ -8,8 +8,8 @@
 	var badArray = new Array(10); // Creates an empty Array that's sized for 10 elements.
 	var goodArray= [10];          // Creates an Array with 10 as the first element.
 */
-var myarray  = new Array('0 ','1 ','2 ','3 ','4 ','5 ','6 ','7 ','8 ','9 ');
-var x,value,key;
+var myarray  = new Array(0,1,2,3,4,5,6,7,8,9),x,value,key;
+
 function swap(){
 	x = myarray[0];
 	for (i=1;i<myarray.length;i++)
@@ -20,29 +20,31 @@ return myarray;
 function prt(){
 	test = new Array();
 	newarray = new Array();
+/*1*/
 	newarray[0] =  swap();
 	myarray = newarray[0];
-	test +=newarray[0];
-	document.write(newarray[0]+"</br>");
-	
+	test = newarray[0];
+	console.log(test);
+	//document.write(test+"</br>");
+/*2*/
 	newarray[1] =  swap();
 	myarray = newarray[1];
-	test +=newarray[1];
-	document.write(newarray[1]+"</br>");
-
+	test.concat(newarray[1]);
+	console.log(test);
+	//document.write(test+"</br>");
+/*3*/
 	newarray[2] =  swap();
 	myarray = newarray[2];
-	test +=newarray[2];
-	document.write(newarray[2]+"</br>");
-
+	test.concat(newarray[2]);
+	console.log(test);
+	//document.write(test+"</br>");
+/*4*/
 	newarray[3] =  swap();
 	myarray = newarray[3];
-	test +=newarray[3];
-	document.write(newarray[3]+"</br>");
-	
-	document.write(test);
+	test.concat(newarray[3]);
+	console.log(test);
 }
-setTimeout(prt,2000);
+prt();
 </script>
 </body>
 </html>
