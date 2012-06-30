@@ -1,0 +1,18 @@
+-convert array to string :{
+	var a = ["green","blue","red"];
+	a.toLocaleString();	  //out put : "red,green,blue"
+	a.tostring ();		 //out put : "red,green,blue"
+	a.valueOf();		//out put : "red,green,blue"
+}
+
+-convert string to array :{
+	var scolors = "green";
+	var acolors = scolors.splite("");
+	console.log(acolors);//outputs : "g,r,e,e,n";
+}
+
+-add new values to array:{
+	var num1 = ["1","2","3"];
+	var num2 = num1.concat("4","5");
+	console.log(num2.toString());
+}
