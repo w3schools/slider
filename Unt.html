@@ -2,16 +2,68 @@
 <head>
 <title>slide show</title>
 </head>
+<style type="text/css">
+div{
+	width:50px;
+	height:50px;
+	background-color:magenta;
+	margin-left:2px;
+	float:left;
+}
+button{
+	width:50px;
+	height:50px;
+
+	margin-left:2px;
+	float:left;	
+}
+.box{
+width:630px;
+background-color:transparent;
+margin-left:250px
+}
+</style>
+<body>
+<div class="box">
+<button id="back">back</button>
+	<div id="0"></div>
+	<div id="1"></div>
+	<div id="2"></div>
+	<div id="3"></div>
+	<div id="4"></div>
+	<div id="5"></div>
+	<div id="6"></div>
+	<div id="7"></div>
+	<div id="8"></div>
+	<div id="9"></div>
+<button id="next">next</button>
+</div>
+</body>
+
 <script type="text/javascript">
 var myarray  = new Array(0,1,2,3,4,5,6,7,8,9);
-
-function queue(){
+for(i=0;i<10;i++)
+	document.getElementById(i).innerHTML = myarray[i];
+/* --- function --- */
+function _next(){
 	myarray.push(myarray[0]);
 	myarray.shift();	
 }
 
-</script>
-<body>
+function _back(){
+	myarray.unshift(myarray.pop());	
+}
+/* --- end --- */
+document.getElementById("next").onclick = function (){
+	_next();
+	for(i=0;i<10;i++)
+		document.getElementById(i).innerHTML = myarray[i];
+}
 
-</body>
+document.getElementById("back").onclick = function (){
+	_back();
+	for(i=0;i<10;i++)
+		document.getElementById(i).innerHTML = myarray[i];
+}
+</script>
 </html>
