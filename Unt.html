@@ -8,9 +8,12 @@
 <button id="back">back</button>
 
 <script type="text/javascript">
-	var div="";
-	var myarray  = new Array(0,1,2,3,4,5,6,7,8,9);
-	var color = new Array('green','cyan','blue','red','magenta','darkgreen','darkmagenta','yellow','orange','cyan');
+	/* variable */
+	var div		 =	"",
+	 	myarray  =	new Array(0,1,2,3,4,5,6,7,8,9),
+		color 	 =	new Array('#a7f','cyan','blue','red','magenta','#1a991f','darkmagenta','yellow','orange','#87ff74'),
+		box,	cr,	txt,	div;
+	/* create Elements for box class */
 	with(document){
 		box = getElementsByClassName("box");
 		for (i=0;i<10;i++){
