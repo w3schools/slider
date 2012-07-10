@@ -1,7 +1,7 @@
 div{
 	width:50px;
 	height:50px;
-	background-color:magenta;
+	/*background-color:magenta;*/
 	margin-left:2px;
 	float:left;
 }
@@ -16,34 +16,4 @@ button{
 	width:630px;
 	background-color:transparent;
 	margin-left:250px
-}
-#a0{
-	background-color:#030;	
-}
-#a1{
-	background-color:#330;
-}
-#a2{
-	background-color:#6C6;
-}
-#a3{
-	background-color:#990;
-}
-#a4{
-	background-color:#CCFF33;
-}
-#a5{
-	background-color:#6FF;
-}
-#a6{
-	background-color:#C30;
-}
-#a7{
-	background-color:#00F;
-}
-#a8{
-	background-color:#30F;
-}
-#a9{
-	background-color:#9966FF;
 }

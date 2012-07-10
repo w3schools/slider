@@ -10,8 +10,15 @@
 <script type="text/javascript">
 	var div="";
 	var myarray  = new Array(0,1,2,3,4,5,6,7,8,9);
-	for (i=0;i<10;i++){		
-		div += "<div id='"+'a'+i+"'>"+myarray[i]+"</div>";
+	var color = new Array('green','cyan','blue','red','magenta','darkgreen','darkmagenta','yellow','orange','cyan');
+	box = document.getElementsByClassName("box");
+	for (i=0;i<10;i++){
+		cr = document.createElement("div");
+		cr.setAttribute("id","a"+i);
+		cr.style.backgroundColor = color[i];
+		txt = document.createTextNode(myarray[i]);
+		cr.appendChild(txt);
+		box.item(0).appendChild(cr);
 	}
 	document.write(div);
 </script>
