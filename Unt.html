@@ -6,11 +6,13 @@
 <body>
 <div class="box">
 <button id="back">back</button>
+
 <script type="text/javascript">
-	var div=""; 
-var myarray  = new Array(0,1,2,3,4,5,6,7,8,9);
-	for (i=0;i<10;i++)
-		div += "<div id='"+i+"'>"+myarray[i]+"</div>";
+	var div="";
+	var myarray  = new Array(0,1,2,3,4,5,6,7,8,9);
+	for (i=0;i<10;i++){		
+		div += "<div id='"+'a'+i+"'>"+myarray[i]+"</div>";
+	}
 	document.write(div);
 </script>
 <button id="next">next</button>
@@ -33,13 +35,13 @@ var queue  = {
 document.getElementById("next").onclick = function (){
 	queue._next();
 	for(i=0;i<10;i++)
-		document.getElementById(i).innerHTML = myarray[i];
+		document.getElementById('a'+i).innerHTML = myarray[i];
 }
 
 document.getElementById("back").onclick = function (){
 	queue._back();
 	for(i=0;i<10;i++)
-		document.getElementById(i).innerHTML = myarray[i];
+		document.getElementById('a'+i).innerHTML = myarray[i];
 }
 </script>
 </html>
