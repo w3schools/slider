@@ -11,30 +11,34 @@
 	var div="";
 	var myarray  = new Array(0,1,2,3,4,5,6,7,8,9);
 	var color = new Array('green','cyan','blue','red','magenta','darkgreen','darkmagenta','yellow','orange','cyan');
-	box = document.getElementsByClassName("box");
-	for (i=0;i<10;i++){
-		cr = document.createElement("div");
-		cr.setAttribute("id","a"+i);
-		cr.style.backgroundColor = color[i];
-		txt = document.createTextNode(myarray[i]);
-		cr.appendChild(txt);
-		box.item(0).appendChild(cr);
+	with(document){
+		box = getElementsByClassName("box");
+		for (i=0;i<10;i++){
+			cr = createElement("div");
+			cr.setAttribute("id","a"+i);
+			cr.style.backgroundColor = color[i];
+			txt = createTextNode(myarray[i]);
+			cr.appendChild(txt);
+			box.item(0).appendChild(cr);
+		}
+		write(div);
 	}
-	document.write(div);
 </script>
 <button id="next">next</button>
 </div>
 </body>
 <script type="text/javascript">
 /* --- function --- */
-
 var queue  = {
 	_next : function(){
 		myarray.push(myarray[0]);
 		myarray.shift();
+		color.push(String(color[0]));
+		color.shift();
 	},
 	_back : function(){
 		myarray.unshift(myarray.pop());
+		color.unshift(String(color.pop()));
 	}
 }
 
@@ -42,13 +46,25 @@ var queue  = {
 document.getElementById("next").onclick = function (){
 	queue._next();
 	for(i=0;i<10;i++)
-		document.getElementById('a'+i).innerHTML = myarray[i];
+	{
+		with(document.getElementById('a'+i))
+		{
+			innerHTML = myarray[i];	
+			style.backgroundColor = color[i]
+		}
+	}
 }
 
 document.getElementById("back").onclick = function (){
 	queue._back();
 	for(i=0;i<10;i++)
-		document.getElementById('a'+i).innerHTML = myarray[i];
+	{
+		with(document.getElementById('a'+i))
+		{
+			innerHTML = myarray[i];	
+			style.backgroundColor = color[i]
+		}
+	}
 }
 </script>
 </html>
