@@ -42,32 +42,29 @@ var queue  = {
 	_next : function(){
 		myarray.unshift(myarray.pop());
 		color.unshift(String(color.pop()));
+	},
+	_refresh : function(){
+		for(i=0;i<10;i++)
+		{
+			with(document.getElementById('a'+i))
+			{
+				innerHTML = myarray[i];	
+				style.backgroundColor = color[i]
+			}
+		}	
 	}
+	
 }
 
 /* --- end --- */
 document.getElementById("next").onclick = function (){
 	queue._next();
-	for(i=0;i<10;i++)
-	{
-		with(document.getElementById('a'+i))
-		{
-			innerHTML = myarray[i];	
-			style.backgroundColor = color[i]
-		}
-	}
+	queue._refresh();
 }
 
 document.getElementById("back").onclick = function (){
 	queue._back();
-	for(i=0;i<10;i++)
-	{
-		with(document.getElementById('a'+i))
-		{
-			innerHTML = myarray[i];	
-			style.backgroundColor = color[i]
-		}
-	}
+	queue._refresh();
 }
 </script>
 </html>
