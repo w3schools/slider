@@ -33,13 +33,13 @@
 <script type="text/javascript">
 /* --- function --- */
 var queue  = {
-	_next : function(){
+	_back : function(){
 		myarray.push(myarray[0]);
 		myarray.shift();
 		color.push(String(color[0]));
 		color.shift();
 	},
-	_back : function(){
+	_next : function(){
 		myarray.unshift(myarray.pop());
 		color.unshift(String(color.pop()));
 	}
