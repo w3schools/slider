@@ -12,6 +12,7 @@
 	var div		 =	"",
 	 	myarray  =	new Array(0,1,2,3,4,5,6,7,8,9),
 		color 	 =	new Array('#a7f','cyan','blue','red','magenta','#1a991f','darkmagenta','yellow','orange','#87ff74'),
+		oFragment = document.createDocumentFragment(),
 		box,	cr,	txt,	div;
 	/* create Elements for box class */
 	with(document){
@@ -22,8 +23,9 @@
 			cr.style.backgroundColor = color[i];
 			txt = createTextNode(myarray[i]);
 			cr.appendChild(txt);
-			box.item(0).appendChild(cr);
+			oFragment.appendChild(cr);
 		}
+		box.item(0).appendChild(oFragment);
 		write(div);
 	}
 </script>
